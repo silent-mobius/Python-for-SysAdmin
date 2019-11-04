@@ -18,13 +18,13 @@
   3. [Shell Modules](#exploring-standard-modules-shell-modules)
   4. [Date and Time Modules](#exploring-standard-modules-date-and-time-modules)
   5. [Subprocess Module](#exploring-standard-modules-subprocess-module)
-  6. [Argparse Module](#exploring-standard-modules-argparse-module)<!--TODO -->
-  6. [SQLite Module](#exploring-standard-modules-embedded-relational-database-module) 
-  7. [XmlTree Module](#exploring-xmltree-module)
-  8. [JSON Module](#exploring-json-module)
+  6. [ArgParse Module](#exploring-standard-modules-argparse-module)<!--TODO -->
+  6. [SQLite Module](#exploring-standard-modules-sqlite-module) 
+  7. [XmlTree Module](#exploring-standard-modules-xmltree-module)
+  8. [JSON Module](#exploring-standard-modules-json-module)
   9. [Regular Expressions Module](#exprloting-standard-regular-expression-module)
-  10. [Compression Module](#exploring-compression-module)
-  11. [Platform Module](#exploring-platform-module)
+  10. [Compression Module](#exploring-standard-modules-compression-module)
+  11. [Platform Module](#exploring-standard-modules-platform-module)
   12. [Signal Module](#exploring-standard-modules-signal-module)
   13. [Socket Module](#exploring-standard-modules-socket-module)
 
@@ -873,7 +873,8 @@ None
 
 #### [Learn more about subprocess module](https://docs.python.org/3.7/library/subprocess.html?highlight=subprocess#module-subprocess)
 
-## `Exploring Argparse` Command-Line Option and Argument Parsing
+## `Exploring Standard Modules` ArgParse Module
+
 
 Python built-in `argparse` is parser for command-line options, arguments and subcommands. The argparse module provides argument management just like `sys.argv`, but with options, e.g it generates help and usage messages and issues errors when users give the program invalid arguments.
 Let’s show the sort of functionality by making use of the ls command:
@@ -1005,7 +1006,7 @@ Create a new `ArgumentParser` object. Each parameter has its own more detailed d
 
 #### [Learn more about argparse module](https://docs.python.org/3.7/library/argparse.html)
 
-## `Exploring SQLite Module` exploring-standard-modules-embedded-relational-database-module
+## `Exploring Standard Modules` SQLite Module
 
 SQLite is a C-language library that implements a SQL like database engine which is relatively quick, serverless and self-contained, high-reliable. SQLite comes built-in with most of the moden software, hardware devices and browsers, thus Python also has embedded SQLite engine named sqlite3.
 
@@ -1028,13 +1029,15 @@ To Start using the sqlite3 library:
 
 #### [Learn More about SQLite3 Module](https://docs.python.org/3.7/library/sqlite3.html)
 
-## `Exploring XmlTree Module` exploring-xmltree-module
+## `Exploring Standard Modules` XmlTree Module
+XmlTree Module
+
 
 
 #### [Learn More about XmlTree Module](https://docs.python.org/3.7/library/xml.etree.elementtree.html#module-xml.etree.ElementTree)
 
 
-## `Exploring JSON Module` exploring-json-module
+## `Exploring Standard Modules` JSON Module
 
 JSON is text, written with JavaScript object notation. JSON is a syntax for storing and exchanging data.
 
