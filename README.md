@@ -933,7 +933,7 @@ print(args.accumulate(args.integers))
 
 Assuming the Python code above is saved into a file called `app.py`, it can be run at the command line and provides useful help messages
 
-```bash
+```sh
 $ app.py -h
 usage: prog.py [-h] [--sum] N [N ...]
 
