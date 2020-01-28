@@ -1039,10 +1039,17 @@ XmlTree Module
 
 ## `Exploring Standard Modules` JSON Module
 
-JSON is text, written with JavaScript object notation. JSON is a syntax for storing and exchanging data.
+JSON (an acronym for JavaScript Object Notation) is a data-interchange format and is most commonly used for client-server communication.
+A JSON is an unordered collection of key and value pairs, resembling Python’s native dictionary, meaning it has some rules it abides to:
+- Keys are unique Strings that cannot be null.
+- Values can be anything from a String, Boolean, Number, list, or even null.
+- A JSON can be represented by a String enclosed within curly braces with keys and values separated by a colon, and pairs separated by a comma. More info on `JSON` would be [here](https://en.wikipedia.org/wiki/JSON) 
 
-- `json.loads()`
-- `json.dumps()`
+
+-`json.load()` : is used to read the JSON document from file
+- `json.loads()` : is used to convert the JSON String document into the Python dictionary
+- `json.dumps()` : is a method encodes any Python object into JSON formatted String
+- `json.dump()` : is a method used to write Python serialized object as JSON formatted data into a file. The file type can be anything including text, json or even binary file
 
 
 
