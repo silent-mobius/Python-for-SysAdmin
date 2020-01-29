@@ -1046,7 +1046,7 @@ A JSON is an unordered collection of key and value pairs, resembling Python’s 
 - A JSON can be represented by a String enclosed within curly braces with keys and values separated by a colon, and pairs separated by a comma. More info on `JSON` would be [here](https://en.wikipedia.org/wiki/JSON) 
 
 
--`json.load()` : is used to read the JSON document from **file**
+- `json.load()` : is used to read the JSON document from **file**
 - `json.loads()` : is used to convert the JSON String document into the **Python dictionary**
 - `json.dumps()` : is a method encodes any Python object into JSON formatted **String**
 - `json.dump()` : is a method used to **write** Python serialized object as JSON formatted data **into a file**. The file type can be anything including text, json or even binary file.
