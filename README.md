@@ -1024,7 +1024,7 @@ To Start using the sqlite3 library:
 - `connection.commit()` - The commit() method saves all the changes we make.
 - `cursor_object.fetchall()` -  To fetch the data from a database we will execute the SELECT statement and then will use the fetchall() method of the cursor object to store the values into a variable, e.g  **cursor_object.execute('SELECT * FROM employees') ; rows = cursor_object.fetchall()**
 - `cursor_object.rowcount()` - The SQLite3 rowcount is used to return the number of rows that are affected or selected by the latest executed SQL query
-- `cursor_object.executemany()` - It can use the **executemany** statement to insert multiple rows at once.
+- `cursor_object.executemany()` - It can use the **execute many** statement to insert multiple rows at once.
 - `connection.close()` - You are done with your database, it is a good practice to close the connection with close() method. e.g. **connection.close()**
 
 #### [Learn More about SQLite3 Module](https://docs.python.org/3.7/library/sqlite3.html)
@@ -1046,10 +1046,10 @@ A JSON is an unordered collection of key and value pairs, resembling Python’s 
 - A JSON can be represented by a String enclosed within curly braces with keys and values separated by a colon, and pairs separated by a comma. More info on `JSON` would be [here](https://en.wikipedia.org/wiki/JSON) 
 
 
--`json.load()` : is used to read the JSON document from file
-- `json.loads()` : is used to convert the JSON String document into the Python dictionary
-- `json.dumps()` : is a method encodes any Python object into JSON formatted String
-- `json.dump()` : is a method used to write Python serialized object as JSON formatted data into a file. The file type can be anything including text, json or even binary file
+-`json.load()` : is used to read the JSON document from **file**
+- `json.loads()` : is used to convert the JSON String document into the **Python dictionary**
+- `json.dumps()` : is a method encodes any Python object into JSON formatted **String**
+- `json.dump()` : is a method used to **write** Python serialized object as JSON formatted data **into a file**. The file type can be anything including text, json or even binary file.
 
 
 
