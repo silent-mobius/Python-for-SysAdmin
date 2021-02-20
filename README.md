@@ -125,14 +125,14 @@ r = open('/etc/passwd')
 # r = open('/etc/passwd', 'r')
 passwd = r.readlines()
 for line in passwd:
-	line = line.strip()
-	size = len(line)
-	print(size, line)
+    line = line.strip()
+    size = len(line)
+    print(size, line)
 r.close()
 
 ## Reading a file using `with` statement, automatically closes the file
 with open('/etc/passwd') as f:
-	pass
+    pass
 
 ## Writing to a file
 w = open('test.txt', 'w')
@@ -149,10 +149,10 @@ All `open` related errors raises `IOError` exception.
 
 ```python
 try:
-	f = open('/etc/passwd')
+    f = open('/etc/passwd')
 except IOError as e:
-	print ('Opps, something went wrong.')
-	print (e)
+    print ('Opps, something went wrong.')
+    print (e)
 ```
 ---
 
@@ -163,14 +163,14 @@ except IOError as e:
 # working-with-files-01.py
 
 def main():
-	try:
-		with open('/etc/passwd') as f:
-			for no, line in enumerate(f, 1):
-				if '/bin/bash' in line:
-					line = line.strip()
-					print(f'{no} {line}')
-	except IOError as e:
-		print(e)
+    try:
+        with open('/etc/passwd') as f:
+            for no, line in enumerate(f, 1):
+                if '/bin/bash' in line:
+                    line = line.strip()
+                    print(f'{no} {line}')
+    except IOError as e:
+        print(e)
 
 if __name__ == '__main__': main()
 ```
@@ -191,7 +191,7 @@ import fileinput
 
 lines = 0
 for line in fileinput.input():
-	lines += 1
+    lines += 1
 
 print('totat lines:', lines)
 ```
@@ -244,7 +244,7 @@ import sys
 argv_len = len(sys.argv[1:])
 
 if not argv_len == 2:
-	sys.exit(f'invalid number of arguments (expected 2, given: {argv_len})')
+    sys.exit(f'invalid number of arguments (expected 2, given: {argv_len})')
 
 print('two arguments are:', sys.argv[1:])
 ```
@@ -271,26 +271,26 @@ import sys
 script = sys.argv[0]
 
 def print_usage():
-	sys.exit(f'Usage: python {script} pattern')
+    sys.exit(f'Usage: python {script} pattern')
 
 def main(argv):
-	if not len(argv) == 1:
-		print_usage()
+    if not len(argv) == 1:
+        print_usage()
 
-	pattern = argv[0]
+    pattern = argv[0]
 
-	for line in sys.stdin:
-		if pattern in line:
-			print(line.strip())
+    for line in sys.stdin:
+        if pattern in line:
+            print(line.strip())
 
 if __name__ == '__main__':
-	main(sys.argv[1:])
+    main(sys.argv[1:])
 ```
 
 ```bash
 $ cat /etc/services | python3 grep.py 8080
-http-alt	8080/udp     # HTTP Alternate (see port 80)
-http-alt	8080/tcp     # HTTP Alternate (see port 80)
+http-alt    8080/udp     # HTTP Alternate (see port 80)
+http-alt    8080/tcp     # HTTP Alternate (see port 80)
 ```
 
 ---
@@ -350,7 +350,7 @@ import os
 
 # Create the temporary file and write 'test'
 >>> with open(temp, 'w') as f:
-... 	f.write('test\n')
+...     f.write('test\n')
 
 # Get the file stat, such as creation timestamp (ctime)
 >>> st = os.stat(temp)
@@ -427,34 +427,34 @@ import sys
 script = sys.argv[0]
 
 def print_usage():
-	print(f' >> {sys.stderr}, "Usage: python3 {script} DIR"')
-	sys.exit(1)
+    print(f' >> {sys.stderr}, "Usage: python3 {script} DIR"')
+    sys.exit(1)
 
 def filesizes(path):
-	''' calculate and print size of each file in a given directory. '''
+    ''' calculate and print size of each file in a given directory. '''
 
-	for dirpath, dirnames, filenames in os.walk(path):
-		for filename in filenames:
-			filepath = os.path.join(dirpath, filename)
-			_bytes = os.path.getsize(filepath)
-			print (f'{_bytes}, {filepath}')
+    for dirpath, dirnames, filenames in os.walk(path):
+        for filename in filenames:
+            filepath = os.path.join(dirpath, filename)
+            _bytes = os.path.getsize(filepath)
+            print (f'{_bytes}, {filepath}')
 
 def main(argv):
-	if not len(argv) == 1:
-		print_usage()
+    if not len(argv) == 1:
+        print_usage()
 
-	path = argv[0]
-	filesizes(path)
+    path = argv[0]
+    filesizes(path)
 
 if __name__ == '__main__':
-	main(sys.argv[1:])
+    main(sys.argv[1:])
 
 ```
 
 >```bash
-	$ python3 filesizes.py .
-	678 ./filesizes.py
-	```
+    $ python3 filesizes.py .
+    678 ./filesizes.py
+    ```
 
 #### [Learn more about OS module](https://docs.python.org/3.7/library/os.html)
 
@@ -495,7 +495,7 @@ Python running on platforn: {sys.platform}
 ''')
 
 if len(argv) == 10:
-	sys.exit('error: too many arguments')
+    sys.exit('error: too many arguments')
 
 print(f'''
 argv = {argv}
@@ -722,11 +722,11 @@ import sys
 import subprocess
 
 try:
-	cmd = 'false'
-	print ('running command:',cmd)
-	subprocess.check_call(cmd, shell=True)
+    cmd = 'false'
+    print ('running command:',cmd)
+    subprocess.check_call(cmd, shell=True)
 except subprocess.CalledProcessError as error:
-	sys.exit(f'error: {error}')
+    sys.exit(f'error: {error}')
 ```
 
 ```bash
@@ -751,16 +751,16 @@ import subprocess
 import sys
 
 try:
-	cmd = 'cat /etc/hosts'
-	print('running command:', cmd)
-	output = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
+    cmd = 'cat /etc/hosts'
+    print('running command:', cmd)
+    output = subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT)
 except subprocess.CalledProcessError as error:
-	sys.exit('error: {error}')
+    sys.exit('error: {error}')
 else:
-	print('success!')
-	with open('hosts.txt', 'w') as f:
-		f.write(output)
-		#this should give an error in python3.6+
+    print('success!')
+    with open('hosts.txt', 'w') as f:
+        f.write(output)
+        #this should give an error in python3.6+
 ```
 
 By default, `check_output` captures outputs written to `stdout`. Setting the `stderr=subprocess.STDOUT` causes `stderr` outputs to redirected to `stdout`, so errors can be captured as well.
@@ -786,13 +786,13 @@ import sys
 script = sys.argv[0]
 
 def main(argv):
-	if not len(argv) == 1:
-		sys.exit(f'usage: python3 {script} command')
-	cmd = sys.argv[1]
-	print ('running command:', cmd)
-	proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	stdout, stderr = proc.communicate()
-	print(f'''
+    if not len(argv) == 1:
+        sys.exit(f'usage: python3 {script} command')
+    cmd = sys.argv[1]
+    print ('running command:', cmd)
+    proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = proc.communicate()
+    print(f'''
 exit code: {proc.poll()}
 
 stdout:
@@ -803,7 +803,7 @@ stderr:
 ''')
 
 if __name__ == '__main__':
-	main(sys.argv[1:])
+    main(sys.argv[1:])
 ```
 
 ```bash
